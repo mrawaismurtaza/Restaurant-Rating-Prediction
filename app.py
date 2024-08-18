@@ -55,15 +55,12 @@ st.write(y_train.head())
 
 
 # Load the Model
-try:
-    model = joblib.load('random_forest_model.pkl')
-    print("Model loaded successfully.")
-except FileNotFoundError:
-    print("Model file not found.")
-except joblib.exceptions.ByteStreamError as e:
-    print(f"Error reading model file: {e}")
-except Exception as e:
-    print(f"An error occurred: {e}")
+import pickle
+
+# Load the model from the file
+with open('random_forest_model.pkl', 'rb') as file:
+    model = pickle.load(file)
+
 
 #Prediction on testing data
 y_pred = model.predict(X_test)
