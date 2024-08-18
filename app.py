@@ -15,7 +15,7 @@ st.title('Restaurant Ratings Prediction App')
 
 # Describing Data
 st.subheader('Restarant Raw Data')
-restaurants = pd.read_csv(r'C:\Users\star\Documents\Python Start Projects\Machine-Learning-Internship-Cognifyz\Data\Dataset.csv')
+restaurants = pd.read_csv('Dataset.csv')
 st.write(restaurants)
 
 
