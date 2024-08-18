@@ -12,7 +12,10 @@ import joblib
 
 st.title('Restaurant Ratings Prediction App')
 
+import sklearn
 
+model_version = sklearn.__version__
+st.subheader(model_version)
 # Describing Data
 st.subheader('Restarant Raw Data')
 restaurants = pd.read_csv('Dataset.csv')
