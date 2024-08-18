@@ -2,9 +2,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
-import pickle
-
-
 
 
 from sklearn.metrics import mean_squared_error, r2_score
@@ -58,9 +55,7 @@ st.write(y_train.head())
 
 
 # Load the Model
-with open('random_forest_model.pkl', 'rb') as file:
-    model = pickle.load(file)
-
+model = joblib.load('random_forest_model.pkl')
 
 #Prediction on testing data
 y_pred = model.predict(X_test)
