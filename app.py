@@ -55,7 +55,15 @@ st.write(y_train.head())
 
 
 # Load the Model
-model = joblib.load('random_forest_model.pkl')
+try:
+    model = joblib.load('random_forest_model.pkl')
+    print("Model loaded successfully.")
+except FileNotFoundError:
+    print("Model file not found.")
+except joblib.exceptions.ByteStreamError as e:
+    print(f"Error reading model file: {e}")
+except Exception as e:
+    print(f"An error occurred: {e}")
 
 #Prediction on testing data
 y_pred = model.predict(X_test)
