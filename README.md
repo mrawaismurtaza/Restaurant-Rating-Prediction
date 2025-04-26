@@ -5,7 +5,7 @@ Build a machine learning model to predict the
 aggregate rating of a restaurant based on other features.
 Steps:
 1 . Preprocess the dataset by handling missing values,
-encoding categorical variables, and splitting the data
+encoding categorical variables,and splitting the data
 into training and testing sets.
 2 . Select RandomForestRegressor algorithm 
 train it on the training data.
